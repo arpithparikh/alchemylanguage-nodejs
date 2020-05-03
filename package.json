@@ -34,7 +34,9 @@
     "lint": "eslint .",
     "autofix": "eslint --fix .",
     "codecov": "npm run test && (codecov || true)",
-    "validate": "npm ls"
+    "validate": "npm ls",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "body-parser": "^1.13.2",
@@ -51,7 +53,8 @@
     "morgan": "^1.7.0",
     "precommit-hook": "^3.0.0",
     "request": "^2.72.0",
-    "watson-developer-cloud": "^1.8.0"
+    "watson-developer-cloud": "^1.8.0",
+    "snyk": "^1.316.2"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.4",
@@ -81,5 +84,6 @@
     "lint",
     "validate",
     "test"
-  ]
+  ],
+  "snyk": true
 }
